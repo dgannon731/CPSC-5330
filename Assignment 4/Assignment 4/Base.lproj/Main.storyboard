@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs9-qP-NYl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="7uE-hh-LZ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="PIR-Dc-4eC">
+                                <rect key="frame" x="0.0" y="261" width="393" height="395"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move the slider to select your mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry8-Ja-8e8">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7hY-jq-17L">
+                                        <rect key="frame" x="-2" y="80.333333333333314" width="397" height="31"/>
+                                    </slider>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="efu-gM-Fpd">
+                                        <rect key="frame" x="0.0" y="170.33333333333331" width="393" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-aT-ilq">
+                                        <rect key="frame" x="0.0" y="280.33333333333337" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save your mood!"/>
+                                        <connections>
+                                            <action selector="saveMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nu9-ez-eRf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your saved mood will appear here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGd-VG-pSc">
+                                        <rect key="frame" x="0.0" y="374.66666666666663" width="393" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.56458738813152554" green="0.79797979797979801" blue="0.74519252491578625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zs9-qP-NYl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ny-ZZ-VwC"/>
+                            <constraint firstItem="Zs9-qP-NYl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dgg-Jk-LA9"/>
+                            <constraint firstAttribute="trailing" secondItem="PIR-Dc-4eC" secondAttribute="trailing" id="SeC-tb-pN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PIR-Dc-4eC" secondAttribute="bottom" constant="162" id="U9U-Tp-GXo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zs9-qP-NYl" secondAttribute="trailing" id="YhQ-lr-Ttm"/>
+                            <constraint firstItem="PIR-Dc-4eC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jIo-Yq-zeH"/>
+                            <constraint firstItem="PIR-Dc-4eC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="261" id="yys-9s-k03"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="efu-gM-Fpd" id="a8h-ek-cOi"/>
+                        <outlet property="moodLabel" destination="Ry8-Ja-8e8" id="lMv-nh-ryh"/>
+                        <outlet property="moodSlider" destination="7hY-jq-17L" id="OKx-le-evJ"/>
+                        <outlet property="saveMoodLabel" destination="hGd-VG-pSc" id="Gnl-8n-jX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.10687022900763" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+</document>
